@@ -1,0 +1,141 @@
+<!DOCTYPE html><html lang="ja"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width"><link rel="icon" href="data:">
+  <title>スパモン教 | 空飛ぶスパゲティ・モンスターと賛歌</title>
+  <meta name="description" content="スパモン教（Pastafarianism）をやさしく紹介。かわいいスパモンくんの大きなビジュアルと、布教用に公開された曲をまとめたシンプルなページ。">
+  <meta property="og:title" content="スパモン教 | 空飛ぶスパゲティ・モンスターと賛歌">
+  <meta property="og:description" content="スパモン教（Pastafarianism）をやさしく紹介。かわいいスパモンくんの大きなビジュアルと、布教用に公開された曲をまとめたシンプルなページ。">
+  <meta property="og:type" content="website">
+  <style>
+    :root {
+      --bg: #fff8f4;
+      --fg: #2b2b2b;
+      --muted: #6b6b6b;
+      --brand: #f08a5d;
+      --brand-dark: #d66d40;
+      --card: #ffffff;
+      --shadow: 0 6px 20px rgba(0,0,0,.08);
+    }
+    #divimg {
+      background-image: url("./spamon.png");
+      background-size: 100% 100%;
+    }
+    @media (prefers-color-scheme: dark) {
+      :root { --bg:#121212; --fg:#efefef; --muted:#bcbcbc; --card:#1d1d1d; --brand:#ff9e73; --brand-dark:#ff854d; }
+    }
+    *{box-sizing:border-box}
+    body{margin:0; font-family: system-ui, -apple-system, Segoe UI, Roboto, "Hiragino Kaku Gothic ProN", "Noto Sans JP", "Yu Gothic UI", sans-serif; background:var(--bg); color:var(--fg);}
+    header{position:sticky; top:0; background:rgba(255,255,255,.6); backdrop-filter: saturate(180%) blur(10px); border-bottom:1px solid #00000010;}
+    @media (prefers-color-scheme: dark){ header{background:rgba(18,18,18,.6);} }
+    .wrap{max-width:980px; margin:auto; padding:20px;}
+    .brand{display:flex; align-items:center; gap:10px; text-decoration:none; color:inherit;}
+    .brand .dot{width:12px; height:12px; border-radius:50%; background:var(--brand);}    
+    nav a{color:var(--fg); text-decoration:none; margin-left:18px; font-size:14px; opacity:.8}
+    nav a:hover{opacity:1}
+
+    .hero{display:grid; grid-template-columns: 1fr; gap:24px; align-items:center; padding:32px 20px 12px;}
+    @media(min-width:840px){ .hero{grid-template-columns: 1.1fr .9fr; padding:48px 20px 24px;} }
+
+    .card{background:var(--card); border-radius:20px; box-shadow:var(--shadow); padding:18px;}
+    h1{font-size: clamp(28px, 4vw, 44px); line-height:1.12; margin:0 0 8px}
+    p.lead{font-size: clamp(15px, 2.2vw, 18px); color:var(--muted); margin:0}
+    .cta{display:inline-block; margin-top:16px; background:var(--brand); color:#fff; padding:12px 18px; border-radius:999px; text-decoration:none; font-weight:600}
+    .cta:hover{background:var(--brand-dark)}
+
+    .svg-wrap{aspect-ratio:1/1; width:100%; background:linear-gradient(180deg, #ffe1d7, #ffd1c2); border-radius:24px; display:grid; place-items:center; box-shadow:var(--shadow)}
+    @media(prefers-color-scheme:dark){ .svg-wrap{background:linear-gradient(180deg, #2a1e1a, #3a2621);} }
+
+    .section{padding:36px 20px}
+    h2{font-size: clamp(22px, 3vw, 28px); margin:0 0 16px}
+
+    .songs{display:grid; grid-template-columns:1fr; gap:20px}
+    @media(min-width:720px){ .songs{grid-template-columns: 1fr 1fr; } }
+    .song{background:var(--card); padding:16px; border-radius:16px; box-shadow:var(--shadow)}
+    .song h3{margin:0 0 8px; font-size:18px}
+    .song p{margin:0 0 12px; color:var(--muted); font-size:14px}
+    audio{width:100%}
+    footer{padding:28px 20px 60px; color:var(--muted); font-size:12px}
+    code.lic{background:#00000010; padding:.12em .42em; border-radius:6px}
+    details{background:var(--card); padding:14px 16px; border-radius:12px; box-shadow:var(--shadow)}
+  </style>
+</head>
+<body>
+  <header>
+    <div class="wrap" style="display:flex; align-items:center; justify-content:space-between">
+      <a class="brand" href="#top"><span class="dot"></span><strong>スパモン教</strong></a>
+      <nav>
+        <a href="#about">スパモン教とは</a>
+        <a href="#songs">曲</a>
+        <a href="#license">ライセンス</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="top" class="wrap">
+    <section class="hero">
+      <div id="divimg" class="svg-wrap card" aria-label="スパモンくん 大きなイラスト">
+      </div>
+
+      <div class="card">
+        <h1>空飛ぶスパゲティ・モンスター教（スパモン教）</h1>
+        <p class="lead">ユーモアで宗教や教育を風刺するパロディ宗教「Pastafarianism」を、かわいいマスコット <strong>スパモンくん</strong> と一緒にやさしく紹介。布教・イベントで使える賛歌もまとめました。R’amen!</p>
+        <a class="cta" href="#songs">曲を聴く</a>
+      </div>
+    </section>
+
+    <section id="about" class="section">
+      <h2>スパモン教とは</h2>
+      <p>Pastafarianism（空飛ぶスパゲティ・モンスター教）は、2005年のオープンレターを起点に広まった風刺宗教です。創造主はスパゲティ姿で、祈りの締めは <em>R’amen</em>。祝祭として <strong>Pastover</strong>（パスタを食べる日）や <strong>Ramendan</strong>（ラーメンのみの日）を祝います。ここでは、非営利の布教・教育目的で使用できるオリジナル曲を紹介します。</p>
+    </section>
+
+    <section id="songs" class="section">
+      <h2>賛歌・曲</h2>
+      <div class="songs">
+        <article class="song">
+          <h3>Ramen to the Sky</h3>
+          <p>日本語原曲をもとにした英語版。コーラスの “Ramen, Ramen” が会場に響きます。</p>
+          <!-- ▼ 音源URLを差し替えてください（mp3/ogg/webm など） -->
+          <audio controls preload="metadata">
+            <source src="YOUR_AUDIO_URL_1.mp3" type="audio/mpeg">
+            <source src="YOUR_AUDIO_URL_1.ogg" type="audio/ogg">
+            お使いのブラウザはオーディオ再生に対応していません。
+          </audio>
+        </article>
+        <article class="song">
+          <h3>Pastover Hymn</h3>
+          <p>Pastover（パストーバー）で歌う讃歌。コール＆レスポンスに最適。</p>
+          <audio controls preload="metadata">
+            <source src="YOUR_AUDIO_URL_2.mp3" type="audio/mpeg">
+            <source src="YOUR_AUDIO_URL_2.ogg" type="audio/ogg">
+          </audio>
+        </article>
+        <article class="song">
+          <h3>Injili ya Spaghetti（スワヒリ語）</h3>
+          <p>アフリカン・コーラスに合うスワヒリ語版。祝祭的で温かい響き。</p>
+          <audio controls preload="metadata">
+            <source src="YOUR_AUDIO_URL_3.mp3" type="audio/mpeg">
+          </audio>
+        </article>
+        <article class="song">
+          <h3>Ramen ad Caelum（ラテン語）</h3>
+          <p>厳かなラテン語版。聖歌風のアレンジで。</p>
+          <audio controls preload="metadata">
+            <source src="YOUR_AUDIO_URL_4.mp3" type="audio/mpeg">
+          </audio>
+        </article>
+      </div>
+    </section>
+
+    <section id="license" class="section">
+      <h2>ライセンス & クレジット</h2>
+      <p>このページのテキスト・SVGイラスト・記載のオリジナル曲情報は、作者による著作物として <code class="lic">CC BY-NC-SA 4.0</code>（表示・非営利・継承）で公開可能です。曲データ本体のライセンスは各音源に付された条件に従ってください。</p>
+      <details>
+        <summary>表記テンプレート（コピーして使えます）</summary>
+        <p>この楽曲の歌詞および音楽 © 2025 あなたの名前。 本作品は <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.ja" target="_blank" rel="noopener">CC BY-NC-SA 4.0</a> ライセンスで公開されています。Flying Spaghetti Monster（FSM）および関連名称・シンボルは Church of the Flying Spaghetti Monster の権利に属します。本作品は非営利の布教・教育目的で制作されたもので、公式組織とは無関係です。R’amen.</p>
+      </details>
+    </section>
+  </main>
+
+  <footer class="wrap">
+    <p>© 2025 スパモン教プロジェクト / Pastafarian Friends. すべての麺は神聖なり。</p>
+  </footer>
+</body>
+</html>
