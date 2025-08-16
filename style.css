@@ -1,0 +1,92 @@
+/* ===== Link tokens ===== */
+:root{
+  --link:#155EEF;          /* 基本 */
+  --link-hover:#0B49C9;    /* ホバー */
+  --link-visited:#7A3FF2;  /* 訪問済み */
+  --focus-ring:#22C55E;    /* フォーカス枠 */
+}
+@media (prefers-color-scheme: dark){
+  :root{
+    --link:#8AB4FF;
+    --link-hover:#AECBFA;
+    --link-visited:#C7A0FF;
+    --focus-ring:#34D399;
+  }
+}
+
+/* ===== Readable, accessible links ===== */
+a, .link{
+  color:var(--link);
+  text-decoration:underline;
+  text-decoration-thickness:2px;
+  text-underline-offset:3px;
+  text-decoration-skip-ink:auto;
+  outline:none;
+  transition: color .15s ease, text-decoration-thickness .15s ease;
+}
+a:hover, .link:hover{
+  color:var(--link-hover);
+  text-decoration-thickness:3px;
+}
+a:visited, .link:visited{
+  color:var(--link-visited);
+}
+a:active, .link:active{
+  opacity:.9;
+}
+
+/* 明確なキーボードフォーカス（Tab移動時） */
+a:focus-visible, .link:focus-visible{
+  outline:3px solid var(--focus-ring);
+  outline-offset:2px;
+  border-radius:4px;
+}
+
+/* 現在ページ表示（メニューなど） */
+a[aria-current="page"]{
+  font-weight:700;
+  text-decoration: none;
+  position: relative;
+}
+a[aria-current="page"]::after{
+  content:"";
+  position:absolute; left:0; right:0; bottom:-2px; height:2px;
+  background:var(--link);
+  border-radius:2px;
+}
+
+/* 外部リンクマーク（必要なら） */
+a[target="_blank"]:not(.no-ext)::after{
+  content:"↗";
+  font-size:.9em;
+  margin-left:.25em;
+}
+
+/* ボタン風リンク（任意） */
+.link-button{
+  display:inline-flex; align-items:center; gap:.5em;
+  color:#fff; background:var(--link);
+  text-decoration:none;
+  padding:.6em .95em; border-radius:.75rem;
+  box-shadow:0 8px 20px -12px rgba(0,0,0,.35);
+  transition:transform .08s ease, background .15s ease;
+}
+.link-button:hover{ background:var(--link-hover); }
+.link-button:focus-visible{ outline:3px solid var(--focus-ring); outline-offset:2px; }
+.link-button:active{ transform:translateY(1px); }
+
+/* ダーク背景上の反転用（任意で親に .on-dark を付与） */
+.on-dark a, .on-dark .link{
+  color:#E5EEFF;
+  text-decoration-color:rgba(229,238,255,.8);
+}
+.on-dark a:hover, .on-dark .link:hover{
+  color:#FFFFFF;
+  text-decoration-color:#FFF;
+}
+
+/* Windowsハイコントラスト対応 */
+@media (forced-colors: active){
+  a, .link{ color: LinkText; }
+  a:focus-visible, .link:focus-visible{ outline:2px solid Highlight; }
+}

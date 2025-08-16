@@ -1,8 +1,8 @@
 <!DOCTYPE html><html lang="ja"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width"><link rel="icon" href="data:">
   <title>スパモン教 | 空飛ぶスパゲティ・モンスターと賛歌</title>
-  <meta name="description" content="スパモン教（Pastafarianism）をやさしく紹介。かわいいスパモンくんの大きなビジュアルと、布教用に公開された曲をまとめたシンプルなページ。">
+  <meta name="description" content="スパモン教（空飛ぶスパゲッティモンスター教）をやさしく紹介。かわいいスパモンくんの大きなビジュアルと、布教用に公開された曲をまとめたシンプルなページ。">
   <meta property="og:title" content="スパモン教 | 空飛ぶスパゲティ・モンスターと賛歌">
-  <meta property="og:description" content="スパモン教（Pastafarianism）をやさしく紹介。かわいいスパモンくんの大きなビジュアルと、布教用に公開された曲をまとめたシンプルなページ。">
+  <meta property="og:description" content="スパモン教（空飛ぶスパゲッティモンスター教）をやさしく紹介。かわいいスパモンくんの大きなビジュアルと、布教用に公開された曲をまとめたシンプルなページ。">
   <meta property="og:type" content="website">
   <style>
     :root {
@@ -14,6 +14,9 @@
       --card: #ffffff;
       --shadow: 0 6px 20px rgba(0,0,0,.08);
     }
+    :target {
+      scroll-margin-top: 40px; /* ヘッダーの高さ分 */
+    }
     #divimg {
       background-image: url("./spamon.png");
       background-size: 100% 100%;
@@ -23,7 +26,14 @@
     }
     *{box-sizing:border-box}
     body{margin:0; font-family: system-ui, -apple-system, Segoe UI, Roboto, "Hiragino Kaku Gothic ProN", "Noto Sans JP", "Yu Gothic UI", sans-serif; background:var(--bg); color:var(--fg);}
-    header{position:sticky; top:0; background:rgba(255,255,255,.6); backdrop-filter: saturate(180%) blur(10px); border-bottom:1px solid #00000010;}
+    header{
+      position:sticky;
+      top:0;
+      background:rgba(255,255,255,.6);
+      backdrop-filter: saturate(180%) blur(10px);
+      border-bottom:1px solid #00000010;
+      z-index: 1000;
+    }
     @media (prefers-color-scheme: dark){ header{background:rgba(18,18,18,.6);} }
     .wrap{max-width:980px; margin:auto; padding:20px;}
     .brand{display:flex; align-items:center; gap:10px; text-decoration:none; color:inherit;}
@@ -56,6 +66,7 @@
     code.lic{background:#00000010; padding:.12em .42em; border-radius:6px}
     details{background:var(--card); padding:14px 16px; border-radius:12px; box-shadow:var(--shadow)}
   </style>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
   <header>
@@ -76,49 +87,75 @@
 
       <div class="card">
         <h1>空飛ぶスパゲティ・モンスター教（スパモン教）</h1>
-        <p class="lead">ユーモアで宗教や教育を風刺するパロディ宗教「Pastafarianism」を、かわいいマスコット <strong>スパモンくん</strong> と一緒にやさしく紹介。布教・イベントで使える賛歌もまとめました。R’amen!</p>
+        <p class="lead">ユーモアで宗教や教育を風刺するパロディ宗教「空飛ぶスパゲッティ・モンスター教」を、かわいいマスコット <strong>スパモンくん</strong> と一緒にやさしく紹介。布教・イベントで使える賛歌もまとめました。R’amen!</p>
         <a class="cta" href="#songs">曲を聴く</a>
       </div>
     </section>
 
     <section id="about" class="section">
       <h2>スパモン教とは</h2>
-      <p>Pastafarianism（空飛ぶスパゲティ・モンスター教）は、2005年のオープンレターを起点に広まった風刺宗教です。創造主はスパゲティ姿で、祈りの締めは <em>R’amen</em>。祝祭として <strong>Pastover</strong>（パスタを食べる日）や <strong>Ramendan</strong>（ラーメンのみの日）を祝います。ここでは、非営利の布教・教育目的で使用できるオリジナル曲を紹介します。</p>
+      <p>Pastafarianism（空飛ぶスパゲティ・モンスター教）は、2005年のオープンレターを起点に広まった風刺宗教です。創造主はスパゲティ姿で、祈りの締めは <strong>R’amen</strong>（ラーメン）。祝祭として <strong>Pastover</strong>（パストーバー、パスタを食べる日）や <strong>Ramendan</strong>（ラメダン、ラーメンのみの日）を祝います。ここでは、非営利の布教・教育目的で使用できるオリジナル曲を紹介します。</p>
     </section>
 
     <section id="songs" class="section">
-      <h2>賛歌・曲</h2>
+      <h2>賛歌・曲 （<a href="https://code4fukui.github.io/music-player/?m3u8=https://code4fukui.github.io/spamon/music/index.m3u8">MUSIC PLAYERで連続再生</a>）</h2>
       <div class="songs">
         <article class="song">
-          <h3>Ramen to the Sky</h3>
-          <p>日本語原曲をもとにした英語版。コーラスの “Ramen, Ramen” が会場に響きます。</p>
-          <!-- ▼ 音源URLを差し替えてください（mp3/ogg/webm など） -->
+          <h3>ラーメン、響け空まで</h3>
+          <p>スパモン教の教え、ラーメン、パストーバー、ラメダンを歌う賛歌。</p>
           <audio controls preload="metadata">
-            <source src="YOUR_AUDIO_URL_1.mp3" type="audio/mpeg">
-            <source src="YOUR_AUDIO_URL_1.ogg" type="audio/ogg">
+            <source src="music/ラーメン、響け空まで.mp3" type="audio/mpeg">
             お使いのブラウザはオーディオ再生に対応していません。
           </audio>
         </article>
         <article class="song">
-          <h3>Pastover Hymn</h3>
-          <p>Pastover（パストーバー）で歌う讃歌。コール＆レスポンスに最適。</p>
+          <h3>Ramen to the Sky (in English)</h3>
+          <p>日本語原曲をもとにした英語版。コーラスの “Ramen, Ramen” が会場に響きます。</p>
           <audio controls preload="metadata">
-            <source src="YOUR_AUDIO_URL_2.mp3" type="audio/mpeg">
-            <source src="YOUR_AUDIO_URL_2.ogg" type="audio/ogg">
+            <source src="music/Ramen to the Sky.mp3" type="audio/mpeg">
+            お使いのブラウザはオーディオ再生に対応していません。
           </audio>
         </article>
         <article class="song">
-          <h3>Injili ya Spaghetti（スワヒリ語）</h3>
+          <h3>拉面到天空 (in Chinese)</h3>
+          <p>麺の発音はミィエン、中国版。</p>
+          <audio controls preload="metadata">
+            <source src="music/拉面到天空 (in Chinese).mp3" type="audio/mpeg">
+          </audio>
+        </article>
+        <article class="song">
+          <h3>Ramen Hanaqman (in Quechua)</h3>
+          <p>南米アンデス地方を中心に話されている言語、ケチュア語版。アンデスの雰囲気。</p>
+          <audio controls preload="metadata">
+            <source src="Ramen Hanaqman (in Quechua).mp3" type="audio/mpeg">
+          </audio>
+        </article>
+        <article class="song">
+          <h3>Ramen Angani (in Swahili)</h3>
           <p>アフリカン・コーラスに合うスワヒリ語版。祝祭的で温かい響き。</p>
           <audio controls preload="metadata">
-            <source src="YOUR_AUDIO_URL_3.mp3" type="audio/mpeg">
+            <source src="music/Ramen Angani (in Swahili).mp3" type="audio/mpeg">
           </audio>
         </article>
         <article class="song">
-          <h3>Ramen ad Caelum（ラテン語）</h3>
+          <h3>ራመን ወደ ሰማይ (in Ge'ez)</h3>
+          <p>話し言葉として消滅した後もキリスト教の典礼言語および公式の文章語として使われ続けた、古代エチオピア語。</p>
+          <audio controls preload="metadata">
+            <source src="music/ራመን ወደ ሰማይ (in Ge'ez).mp3" type="audio/mpeg">
+          </audio>
+        </article>
+        <article class="song">
+          <h3>Ramen ad Caelum (in Latin)</h3>
           <p>厳かなラテン語版。聖歌風のアレンジで。</p>
           <audio controls preload="metadata">
-            <source src="YOUR_AUDIO_URL_4.mp3" type="audio/mpeg">
+            <source src="music/Ramen ad Caelum (in Latin).mp3" type="audio/mpeg">
+          </audio>
+        </article>
+        <article class="song">
+          <h3>Ramen fino al cielo (in Italian)</h3>
+          <p>スパゲッティの生まれたイタリアの言葉。</p>
+          <audio controls preload="metadata">
+            <source src="music/Ramen fino al cielo (in Italian).mp3" type="audio/mpeg">
           </audio>
         </article>
       </div>
@@ -126,16 +163,16 @@
 
     <section id="license" class="section">
       <h2>ライセンス & クレジット</h2>
-      <p>このページのテキスト・SVGイラスト・記載のオリジナル曲情報は、作者による著作物として <code class="lic">CC BY-NC-SA 4.0</code>（表示・非営利・継承）で公開可能です。曲データ本体のライセンスは各音源に付された条件に従ってください。</p>
+      <p>このページのテキスト・イラスト・記載のオリジナル曲情報は、作者による著作物として <code class="lic">CC BY-NC-SA 4.0</code>（表示・非営利・継承）で公開可能です。曲データ本体のライセンスは各音源に付された条件に従ってください。</p>
       <details>
         <summary>表記テンプレート（コピーして使えます）</summary>
-        <p>この楽曲の歌詞および音楽 © 2025 あなたの名前。 本作品は <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.ja" target="_blank" rel="noopener">CC BY-NC-SA 4.0</a> ライセンスで公開されています。Flying Spaghetti Monster（FSM）および関連名称・シンボルは Church of the Flying Spaghetti Monster の権利に属します。本作品は非営利の布教・教育目的で制作されたもので、公式組織とは無関係です。R’amen.</p>
+        <p>この楽曲の歌詞および音楽 © 2025 taisukef。 本作品は <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.ja" target="_blank" rel="noopener">CC BY-NC-SA 4.0</a> ライセンスで公開されています。Flying Spaghetti Monster（FSM）および関連名称・シンボルは <a href="https://www.spaghettimonster.org/">Church of the Flying Spaghetti Monster</a> の権利に属します。本作品は非営利の布教・教育目的で制作されたもので、公式組織とは無関係です。R’amen.</p>
       </details>
     </section>
   </main>
 
   <footer class="wrap">
-    <p>© 2025 スパモン教プロジェクト / Pastafarian Friends. すべての麺は神聖なり。</p>
+    <p>© 2025 スパモン教プロジェクト / Pastafarian Friends. すべての麺は神聖なり。R’amen.</p>
   </footer>
 </body>
 </html>
